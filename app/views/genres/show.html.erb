@@ -5,6 +5,11 @@
   <%= @genre.name %>
 </p>
 
+<% @genre.movies.each do |movie| %>
+	<%= movie.title %>
+	<br />
+<% end %>
+
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
